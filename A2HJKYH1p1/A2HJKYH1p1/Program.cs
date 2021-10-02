@@ -39,15 +39,30 @@ namespace A2HJKYHS1P1
 
             if (5 < itemNum && itemNum < 10)
             {
-                totalCost = totalCost - 20;
+                discountedTotalCost = totalCost - 20;
             }
-            else if(10 < itemNum)
+            else (10 < itemNum)
             {
-                totalCost = totalCost * 70 / 100;
+                discountedTotalCost = totalCost * 70 / 100;
             }
-            else
+
+            if (discountedTotalCost <= 0)
             {
-                totalCost = totalCost * 87 / 100;
+                totalCost = totalCost * 0.13;
+            }
+
+            if (discountedTotalCost > 100)
+            {
+                furtherDiscountedTotalCost = discountedTotalCost * 97.5 / 100;
+            }
+            else (discountedTotalCost < 30)
+            {
+                furtherDiscountedTotalCost = discountedTotalCost - 2;
+            }
+
+            if (furtherDiscountedTotalCost < 0)
+            {
+                furtherDiscountedTotalCost = 0;
             }
             
 
