@@ -1,0 +1,7 @@
+C:\Users\jennn\OneDrive\바탕 화면\a1\a2hjkyh1p1\A2HJKYH1p1\A2HJKYH1p1\obj\Debug\A2HJKYH1p1.csproj.AssemblyReference.cache
+C:\Users\jennn\OneDrive\바탕 화면\a1\a2hjkyh1p1\A2HJKYH1p1\A2HJKYH1p1\obj\Debug\A2HJKYH1p1.csproj.CoreCompileInputs.cache
+C:\Users\jennn\OneDrive\바탕 화면\a1\a2hjkyh1p1\A2HJKYH1p1\A2HJKYH1p1\bin\Debug\A2HJKYH1p1.exe.config
+C:\Users\jennn\OneDrive\바탕 화면\a1\a2hjkyh1p1\A2HJKYH1p1\A2HJKYH1p1\bin\Debug\A2HJKYH1p1.exe
+C:\Users\jennn\OneDrive\바탕 화면\a1\a2hjkyh1p1\A2HJKYH1p1\A2HJKYH1p1\bin\Debug\A2HJKYH1p1.pdb
+C:\Users\jennn\OneDrive\바탕 화면\a1\a2hjkyh1p1\A2HJKYH1p1\A2HJKYH1p1\obj\Debug\A2HJKYH1p1.exe
+C:\Users\jennn\OneDrive\바탕 화면\a1\a2hjkyh1p1\A2HJKYH1p1\A2HJKYH1p1\obj\Debug\A2HJKYH1p1.pdb

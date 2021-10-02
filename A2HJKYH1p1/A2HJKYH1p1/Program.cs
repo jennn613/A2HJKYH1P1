@@ -16,8 +16,12 @@ namespace A2HJKYHS1P1
             int itemNum; // number of items purchased
             double itemCost; // cost of a single item
             double totalCost; // total cost
+            double discountedTotalCost; // discounted total cost
+            //double furtherDiscountedTotalCost; // total cost after discounting twice
             double tax; // calculate tax
             double finalCost; // final cost
+            
+            /* --------------------------------------------------------------------------- */
 
             // Getting user input
             Console.WriteLine("Please enter the quarter you registered in: ");
@@ -34,24 +38,22 @@ namespace A2HJKYHS1P1
 
             // Calculations
             totalCost = itemCost * itemNum;
+            discountedTotalCost = FirstDiscount(itemNum, totalCost); // total cost after discounted 
             tax = 0.13 * totalCost;
             finalCost = totalCost + tax;
 
-            if (5 < itemNum && itemNum < 10)
-            {
-                discountedTotalCost = totalCost - 20;
-            }
-            else (10 < itemNum)
-            {
-                discountedTotalCost = totalCost * 70 / 100;
-            }
 
-            if (discountedTotalCost <= 0)
+            if (discountedTotalCost < 0) // how can the cost be less than zero? the method and this if statement works well. I changed it to method bc if else if if didn't work
             {
-                totalCost = totalCost * 0.13;
-            }
+                discountedTotalCost = - (totalCost * 0.13);
+            }         
 
-            if (discountedTotalCost > 100)
+            //Console.WriteLine(discountedTotalCost); //you can check if my code works well or not 
+
+
+            //try to make this by using method!
+
+            /*if (discountedTotalCost > 100)
             {
                 furtherDiscountedTotalCost = discountedTotalCost * 97.5 / 100;
             }
@@ -64,7 +66,8 @@ namespace A2HJKYHS1P1
             {
                 furtherDiscountedTotalCost = 0;
             }
-            
+
+            furtherDiscountedTotalCost = 0; */
 
 
             // Displaying information to the user
@@ -75,6 +78,26 @@ namespace A2HJKYHS1P1
             //Console.WriteLine("Total cost before adjustment: " + totalCost);
             //Console.WriteLine("Final cost: " + finalCost);
 
+        }
+
+        static double FirstDiscount(int a, double b) // discount by number of purchsed items, a = itemNum, b = totalCost
+        {
+            double discountedTotalCost;
+
+            if (5 < a && a < 10)
+            {
+                discountedTotalCost = b - 20;
+                return discountedTotalCost;
+            }
+            else if (10 < a)
+            {
+                discountedTotalCost = b * 70 / 100;
+                return discountedTotalCost;
+            }
+            else
+            {
+                return b;
+            }
         }
     }
 }
