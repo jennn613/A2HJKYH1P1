@@ -99,5 +99,31 @@ namespace A2HJKYHS1P1
                 return b;
             }
         }
+        if (discountedTotalCost = 0)
+            {
+                totalCost = totalCost * 0.13;
+            }
+
+        static double SecondDiscount(double a)
+        {
+            double furtherDiscountedTotalCost;
+
+               if (a > 100)
+            {
+                furtherDiscountedTotalCost = a * 97.5 / 100;
+            }
+            else if (a < 30)
+            {
+                furtherDiscountedTotalCost = a - 2;
+            }
+            else
+            {
+                return a;
+            }
+        }
+        if (furtherDiscountedTotalCost < 0)
+        {
+            furtherDiscountedTotalCost = 0;
+        }
     }
 }
