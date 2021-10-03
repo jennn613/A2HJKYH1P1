@@ -147,7 +147,6 @@ namespace A2HJKYHS1P1
             // Calculations
             totalCost = itemCost * itemNum;
             discountedTotalCost = Discount(itemNum, totalCost);
-            furtherDiscountedTotalCost = Discount(discountedTotalCost);
             tax = 0.13 * totalCost;
             finalCost = totalCost + tax;
 
@@ -155,9 +154,28 @@ namespace A2HJKYHS1P1
             {
                 discountedTotalCost = -(totalCost * 0.13);
             }
+
+            furtherDiscountedTotalCost = Discount(discountedTotalCost);
+            
             if (furtherDiscountedTotalCost < 0)
             {
                 furtherDiscountedTotalCost = 0;
+            }
+
+            switch (Convert.ToInt32(quarter))
+            {
+                case 1:
+                    furtherDiscountedTotalCost - 15;
+                    break;
+                case 2:
+                    furtherDiscountedTotalCost - 15;
+                    break;
+                case 3:
+                    furtherDiscountedTotalCost - 5;
+                    break;
+                case 4:
+                    furtherDiscountedTotalCost - 1;
+                    break;
             }
 
             // Displaying information to the user
