@@ -18,7 +18,6 @@ namespace A2HJKYHS1P1
             double totalCost; // total cost of items
             double discountedTotalCost; // 
             double furtherDiscountedTotalCost; // 
-            double finalDiscountedCost;
             double tax; // tax
             double finalCost; // final cost
 
@@ -54,43 +53,32 @@ namespace A2HJKYHS1P1
             switch (Convert.ToInt32(quarter))
             {
                 case 1:
-                    finalDiscountedCost = furtherDiscountedTotalCost - 15;
-                    if (finalDiscountedCost < 0)
-                    {
-                        finalDiscountedCost = 0;
-                    }
+                    FinalCost(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
+                    Console.WriteLine(furtherDiscountedTotalCost);
                     break;
                 case 2:
-                    finalDiscountedCost = furtherDiscountedTotalCost - 15;
-                    if (finalDiscountedCost < 0)
-                    {
-                        finalDiscountedCost = 0;
-                    }
+                    FinalCost(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
+                    Console.WriteLine(furtherDiscountedTotalCost);
                     break;
                 case 3:
-                    finalDiscountedCost = furtherDiscountedTotalCost - 5;
-                    if (finalDiscountedCost < 0)
-                    {
-                        finalDiscountedCost = 0;
-                    }
+                    FinalCost(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
+                    Console.WriteLine(furtherDiscountedTotalCost);
                     break;
                 case 4:
-                    finalDiscountedCost = furtherDiscountedTotalCost - 1;
-                    if (finalDiscountedCost < 0)
-                    {
-                        finalDiscountedCost = 0;
-                    }
+                    FinalCost(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
+                    Console.WriteLine(furtherDiscountedTotalCost);
                     break;
                 default:
-                    Console.WriteLine("Invalid yearly quarter. enter again");
+                    Console.WriteLine("Invalid yearly quarter. Please enter again");
                     //quarter =  Console.ReadLine();
                     //Console.WriteLine(quarter);
                     //I want to change the value of quarter that they entered and make this switch statement work again. But I can't figure this out ;_;
                     break;
             }
-            //This is the part I'm stuck on
-            tax = 0.13 * finalDiscountedCost;
-            finalCost = finalDiscountedCost + tax;
+
+            tax = 0.13 * furtherDiscountedTotalCost;
+            finalCost = furtherDiscountedTotalCost + tax;
+            Console.WriteLine(finalCost);
 
             // Displaying information to the user
             //Console.WriteLine(quarter + " is the quarter you registered in.");
@@ -142,6 +130,37 @@ namespace A2HJKYHS1P1
             {
                 return a;
             }
+        }
+
+        static double FinalCost(int a, double b) // discount by yearly quarter, a = quarter, b = furtherDiscountedTotalCost
+        {
+
+            if (a == 1 || a ==2)
+            {
+                b = b - 15;
+            }
+            
+            else if (a == 3)
+            {
+                b = b - 5;
+            }
+
+            else if (a == 4)
+            {
+                b = b - 1;
+            }
+
+            else
+            {
+                Console.WriteLine("Invalid yearly quarter. Please enter again");
+            }
+
+            if (b < 0)
+            {
+                b = 0;
+            }
+
+            return b;
         }
 
     }
