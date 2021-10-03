@@ -35,8 +35,23 @@ namespace A2HJKYHS1P1
             double finalCost; // final cost
 
             // Getting user input
-            Console.Write("Please enter the quarter you registered in: ");
-            quarter = Console.ReadLine();
+
+            do
+            {
+                Console.Write("Please enter the quarter you registered in: ");
+                quarter = Console.ReadLine();
+
+                if (Convert.ToInt32(quarter) > 5 || 0 >= Convert.ToInt32(quarter))
+                {
+                    Console.WriteLine("Invalid quarter. Please enter your quarter again.");
+                }
+                else
+                {
+                    break;
+                }
+
+            } while (Convert.ToInt32(quarter) > 5 || 0 >= Convert.ToInt32(quarter));
+            
 
             Console.Write("Please enter your membership number: ");
             membershipNum = Console.ReadLine();
