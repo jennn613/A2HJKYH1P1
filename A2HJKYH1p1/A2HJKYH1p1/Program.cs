@@ -38,8 +38,6 @@ namespace A2HJKYHS1P1
             // Calculations
             totalCost = itemCost * itemNum;
             discountedTotalCost = Discount(itemNum, totalCost);
-            tax = 0.13 * totalCost;
-            finalCost = totalCost + tax;
 
             if (discountedTotalCost < 0)
             {
@@ -90,8 +88,9 @@ namespace A2HJKYHS1P1
                     //I want to change the value of quarter that they entered and make this switch statement work again. But I can't figure this out ;_;
                     break;
             }
-
-
+            //This is the part I'm stuck on
+            tax = 0.13 * finalDiscountedCost;
+            finalCost = finalDiscountedCost + tax;
 
             // Displaying information to the user
             //Console.WriteLine(quarter + " is the quarter you registered in.");
