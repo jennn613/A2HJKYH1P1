@@ -83,43 +83,47 @@ namespace A2HJKYHS1P1
             //Console.WriteLine("Total cost before adjustment: " + totalCost);
             //Console.WriteLine("Final cost: " + finalCost);
 
+        
+
+            static double FirstDiscount(int a, double b) // discount by number of purchsed items, a = itemNum, b = totalCost
+            {
+                double discountedTotalCost;
+
+                if (5 < a && a < 10)
+                {
+                    discountedTotalCost = b - 20;
+                    return discountedTotalCost;
+                }
+                else if (10 < a)
+                {
+                    discountedTotalCost = b * 70 / 100;
+                    return discountedTotalCost;
+                }
+                else
+                {
+                    return b;
+                }
+            }
+
+            static double SecondDiscount(double a)
+            {
+                double furtherDiscountedTotalCost;
+
+                if (a > 100)
+                {
+                    furtherDiscountedTotalCost = a * 97.5 / 100;
+                    return furtherDiscountedTotalCost:
+                }
+                else if (a < 30)
+                {
+                    furtherDiscountedTotalCost = a - 2;
+                    return furtherDiscountedTotalCost;
+                }
+                else
+                {
+                    return a;
+                }
+            }
         }
-
-        static double FirstDiscount(int a, double b) // discount by number of purchsed items, a = itemNum, b = totalCost
-        {
-            double discountedTotalCost;
-
-            if (5 < a && a < 10)
-            {
-                discountedTotalCost = b - 20;
-                return discountedTotalCost;
-            }
-            else if (10 < a)
-            {
-                discountedTotalCost = b * 70 / 100;
-                return discountedTotalCost;
-            }
-            else
-            {
-                return b;
-            }
-        }
-
-        static double SecondDiscount(double a)
-        {
-            double furtherDiscountedTotalCost;
-
-               if (a > 100)
-            {
-                furtherDiscountedTotalCost = a * 97.5 / 100;
-            }
-            else if (a < 30)
-            {
-                furtherDiscountedTotalCost = a - 2;
-            }
-            else
-            {
-                return a;
-            }
     }
 }
