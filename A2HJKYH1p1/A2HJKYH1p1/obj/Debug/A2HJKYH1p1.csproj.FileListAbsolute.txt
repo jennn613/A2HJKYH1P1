@@ -12,3 +12,10 @@ C:\Users\jennn\OneDrive\바탕 화면\A2HJKYH1P1\A2HJKYH1p1\A2HJKYH1p1\obj\Debug
 C:\Users\jennn\OneDrive\바탕 화면\A2HJKYH1P1\A2HJKYH1p1\A2HJKYH1p1\obj\Debug\A2HJKYH1p1.csproj.CoreCompileInputs.cache
 C:\Users\jennn\OneDrive\바탕 화면\A2HJKYH1P1\A2HJKYH1p1\A2HJKYH1p1\obj\Debug\A2HJKYH1p1.exe
 C:\Users\jennn\OneDrive\바탕 화면\A2HJKYH1P1\A2HJKYH1p1\A2HJKYH1p1\obj\Debug\A2HJKYH1p1.pdb
+C:\Users\Yusuf\Documents\GitHub\A2HJKYH1P1\A2HJKYH1p1\A2HJKYH1p1\bin\Debug\A2HJKYH1p1.exe.config
+C:\Users\Yusuf\Documents\GitHub\A2HJKYH1P1\A2HJKYH1p1\A2HJKYH1p1\bin\Debug\A2HJKYH1p1.exe
+C:\Users\Yusuf\Documents\GitHub\A2HJKYH1P1\A2HJKYH1p1\A2HJKYH1p1\bin\Debug\A2HJKYH1p1.pdb
+C:\Users\Yusuf\Documents\GitHub\A2HJKYH1P1\A2HJKYH1p1\A2HJKYH1p1\obj\Debug\A2HJKYH1p1.csproj.AssemblyReference.cache
+C:\Users\Yusuf\Documents\GitHub\A2HJKYH1P1\A2HJKYH1p1\A2HJKYH1p1\obj\Debug\A2HJKYH1p1.csproj.CoreCompileInputs.cache
+C:\Users\Yusuf\Documents\GitHub\A2HJKYH1P1\A2HJKYH1p1\A2HJKYH1p1\obj\Debug\A2HJKYH1p1.exe
+C:\Users\Yusuf\Documents\GitHub\A2HJKYH1P1\A2HJKYH1p1\A2HJKYH1p1\obj\Debug\A2HJKYH1p1.pdb

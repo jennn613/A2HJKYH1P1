@@ -31,7 +31,7 @@ namespace A2HJKYHS1P1
             double totalCost; // total cost of items
             double discountedTotalCost; // first discount from total cost
             double furtherDiscountedTotalCost; // second discount from total cost
-            double tax; // tax
+            double finalDiscountedTotalCost; //The last discounted cost
             double finalCost; // final cost
 
             // Getting user input
@@ -51,7 +51,6 @@ namespace A2HJKYHS1P1
                 }
 
             } while (Convert.ToInt32(quarter) > 5 || 0 >= Convert.ToInt32(quarter));
-            
 
             Console.Write("Please enter your membership number: ");
             membershipNum = Console.ReadLine();
@@ -78,33 +77,9 @@ namespace A2HJKYHS1P1
                 furtherDiscountedTotalCost = 0;
             }
 
-            switch (Convert.ToInt32(quarter))
-            {
-                case 1:
-                    FinalCost(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
-                    //Console.WriteLine(furtherDiscountedTotalCost);
-                    break;
-                case 2:
-                    FinalCost(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
-                    //Console.WriteLine(furtherDiscountedTotalCost);
-                    break;
-                case 3:
-                    FinalCost(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
-                    //Console.WriteLine(furtherDiscountedTotalCost);
-                    break;
-                case 4:
-                    FinalCost(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
-                    //Console.WriteLine(furtherDiscountedTotalCost);
-                    break;
-                default:
-                    Console.WriteLine("Invalid yearly quarter. Please enter again");
-                    //quarter =  Console.ReadLine();
-                    //Console.WriteLine(quarter);
-                    break;
-            }
+            finalDiscountedTotalCost = SwitchS(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
 
-            tax = 0.13 * furtherDiscountedTotalCost;
-            finalCost = furtherDiscountedTotalCost + tax;
+            finalCost = finalDiscountedTotalCost * 1.13;
 
             if (finalCost < 20)
             {
@@ -134,7 +109,7 @@ namespace A2HJKYHS1P1
                 discountedTotalCost = b - 20;
                 return discountedTotalCost;
             }
-            else if (10 < a)
+            else if (a > 10)
             {
                 discountedTotalCost = b * 70 / 100;
                 return discountedTotalCost;
@@ -166,22 +141,22 @@ namespace A2HJKYHS1P1
             }
         }
 
-        static double FinalCost(int a, double b) // discount by yearly quarter, a = quarter, b = furtherDiscountedTotalCost
+        /*static double FinalCost(int a, double b) // discount by yearly quarter, a = quarter, b = furtherDiscountedTotalCost
         {
 
             if (a == 1 || a ==2)
             {
-                b = b - 15;
+                b -= 15;
             }
             
             else if (a == 3)
             {
-                b = b - 5;
+                b -= 5;
             }
 
             else if (a == 4)
             {
-                b = b - 1;
+                b -= 1;
             }
 
             else
@@ -195,6 +170,40 @@ namespace A2HJKYHS1P1
             }
 
             return b;
+        }*/
+
+        static double SwitchS(int a, double b)
+        {
+            switch (Convert.ToInt32(a))
+            {
+                case 1:
+                    if (a == 1)
+                    {
+                        b -= 15;
+                    }
+                    return b;
+                case 2:
+                    if (a == 2)
+                    {
+                        b -= 15;
+                    }
+                    return b;
+                case 3:
+                    if (a == 3)
+                    {
+                        b -= 5;
+                    }
+                    return b;
+                case 4:
+                    if (a == 4)
+                    {
+                        b -= 1;
+                    }
+                    return b;
+                default:
+                    Console.WriteLine("Invalid yearly quarter. Please enter again");
+                    return a;
+            }
         }
 
     }
