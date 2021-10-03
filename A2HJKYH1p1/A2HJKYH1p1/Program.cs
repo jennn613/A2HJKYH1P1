@@ -16,8 +16,8 @@ namespace A2HJKYHS1P1
             int itemNum; // number of items purchased
             double itemCost; // cost of single item
             double totalCost; // total cost of items
-            double discountedTotalCost; // 
-            double furtherDiscountedTotalCost; // 
+            double discountedTotalCost; // first discount from total cost
+            double furtherDiscountedTotalCost; // second discount from total cost
             double tax; // tax
             double finalCost; // final cost
 
@@ -78,6 +78,12 @@ namespace A2HJKYHS1P1
 
             tax = 0.13 * furtherDiscountedTotalCost;
             finalCost = furtherDiscountedTotalCost + tax;
+
+            if (finalCost < 20)
+            {
+                finalCost = 0;
+            }
+
             Console.WriteLine(finalCost);
 
             // Displaying information to the user
