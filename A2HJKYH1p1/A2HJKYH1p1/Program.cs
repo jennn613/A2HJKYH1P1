@@ -38,7 +38,8 @@ namespace A2HJKYHS1P1
 
             // Calculations
             totalCost = itemCost * itemNum;
-            discountedTotalCost = FirstDiscount(itemNum, totalCost); // total cost after discounted 
+            discountedTotalCost = FirstDiscount(itemNum, totalCost); // total cost after discounted
+            furtherDiscountedTotalCost = SecondDiscount(discountedTotalCost);
             tax = 0.13 * totalCost;
             finalCost = totalCost + tax;
 
@@ -46,7 +47,11 @@ namespace A2HJKYHS1P1
             if (discountedTotalCost < 0) // how can the cost be less than zero? the method and this if statement works well. I changed it to method bc if else if if didn't work
             {
                 discountedTotalCost = - (totalCost * 0.13);
-            }         
+            }
+            if (furtherDiscountedTotalCost < 0)
+            {
+                furtherDiscountedTotalCost = 0;
+            }      
 
             //Console.WriteLine(discountedTotalCost); //you can check if my code works well or not 
 
@@ -99,10 +104,6 @@ namespace A2HJKYHS1P1
                 return b;
             }
         }
-        if (discountedTotalCost = 0)
-            {
-                totalCost = totalCost * 0.13;
-            }
 
         static double SecondDiscount(double a)
         {
@@ -120,10 +121,5 @@ namespace A2HJKYHS1P1
             {
                 return a;
             }
-        }
-        if (furtherDiscountedTotalCost < 0)
-        {
-            furtherDiscountedTotalCost = 0;
-        }
     }
 }
