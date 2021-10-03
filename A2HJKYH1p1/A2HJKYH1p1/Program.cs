@@ -1,4 +1,17 @@
-﻿using System;
+﻿/* 
+ * Program ID: assignment2
+ * 
+ * Program Authors:
+ *      Yusuf Hafeji
+ *      Hyunjin Kim
+ * 
+ * 
+ * Revision History:
+ *      created Oct 3, 2021 by Yusuf Hafeji, Hyunjin Kim
+ *      
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,16 +35,16 @@ namespace A2HJKYHS1P1
             double finalCost; // final cost
 
             // Getting user input
-            Console.WriteLine("Please enter the quarter you registered in: ");
+            Console.Write("Please enter the quarter you registered in: ");
             quarter = Console.ReadLine();
 
-            Console.WriteLine("Please enter your membership number: ");
+            Console.Write("Please enter your membership number: ");
             membershipNum = Console.ReadLine();
 
-            Console.WriteLine("Please enter the number of items you are purchasing today: ");
+            Console.Write("Please enter the number of items you are purchasing today: ");
             itemNum = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Please enter the cost of the item you are purchasing today: ");
+            Console.Write("Please enter the cost of the item you are purchasing today: ");
             itemCost = Convert.ToDouble(Console.ReadLine());
 
             // Calculations
@@ -54,25 +67,24 @@ namespace A2HJKYHS1P1
             {
                 case 1:
                     FinalCost(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
-                    Console.WriteLine(furtherDiscountedTotalCost);
+                    //Console.WriteLine(furtherDiscountedTotalCost);
                     break;
                 case 2:
                     FinalCost(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
-                    Console.WriteLine(furtherDiscountedTotalCost);
+                    //Console.WriteLine(furtherDiscountedTotalCost);
                     break;
                 case 3:
                     FinalCost(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
-                    Console.WriteLine(furtherDiscountedTotalCost);
+                    //Console.WriteLine(furtherDiscountedTotalCost);
                     break;
                 case 4:
                     FinalCost(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
-                    Console.WriteLine(furtherDiscountedTotalCost);
+                    //Console.WriteLine(furtherDiscountedTotalCost);
                     break;
                 default:
                     Console.WriteLine("Invalid yearly quarter. Please enter again");
                     //quarter =  Console.ReadLine();
                     //Console.WriteLine(quarter);
-                    //I want to change the value of quarter that they entered and make this switch statement work again. But I can't figure this out ;_;
                     break;
             }
 
@@ -84,16 +96,17 @@ namespace A2HJKYHS1P1
                 finalCost = 0;
             }
 
-            Console.WriteLine(finalCost);
-
             // Displaying information to the user
-            //Console.WriteLine(quarter + " is the quarter you registered in.");
-            //Console.WriteLine("Membership number: " + membershipNum);
-            //Console.WriteLine("Total items: " + itemNum);
-            //Console.WriteLine("Total cost before adjustment: " + totalCost);
-            //Console.WriteLine("Final cost: " + finalCost);
-            //Console.WriteLine("First discounted price: " + discountedTotalCost);
-            //Console.WriteLine("Second discounted price: " + furtherDiscountedTotalCost);
+            Console.WriteLine("");
+            Console.WriteLine(" ---------------------------------------------------- ");
+            Console.WriteLine("");
+            Console.WriteLine(quarter + " is the quarter you registered in.");
+            Console.WriteLine("Membership number: " + membershipNum);
+            Console.WriteLine("Total items: " + itemNum);
+            Console.WriteLine("Total cost before adjustment: " + totalCost);
+            Console.WriteLine("First discounted price: " + discountedTotalCost);
+            Console.WriteLine("Second discounted price: " + furtherDiscountedTotalCost);
+            Console.WriteLine("Final cost: " + finalCost);     
         }
 
 
