@@ -77,7 +77,7 @@ namespace A2HJKYHS1P1
                 furtherDiscountedTotalCost = 0;
             }
 
-            finalDiscountedTotalCost = SwitchS(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
+            finalDiscountedTotalCost = QuarterDiscount(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
 
             finalCost = finalDiscountedTotalCost * 1.13;
 
@@ -141,65 +141,39 @@ namespace A2HJKYHS1P1
             }
         }
 
-        /*static double FinalCost(int a, double b) // discount by yearly quarter, a = quarter, b = furtherDiscountedTotalCost
-        {
-
-            if (a == 1 || a ==2)
-            {
-                b -= 15;
-            }
-            
-            else if (a == 3)
-            {
-                b -= 5;
-            }
-
-            else if (a == 4)
-            {
-                b -= 1;
-            }
-
-            else
-            {
-                Console.WriteLine("Invalid yearly quarter. Please enter again");
-            }
-
-            if (b < 0)
-            {
-                b = 0;
-            }
-
-            return b;
-        }*/
-
-        static double SwitchS(int a, double b)
+        static double QuarterDiscount(int a, double b) // a = quarter, b = furtherDiscountedTotalCost
         {
             switch (Convert.ToInt32(a))
             {
+
                 case 1:
                     if (a == 1)
                     {
                         b -= 15;
                     }
                     return b;
+
                 case 2:
                     if (a == 2)
                     {
                         b -= 15;
                     }
                     return b;
+
                 case 3:
                     if (a == 3)
                     {
                         b -= 5;
                     }
                     return b;
+
                 case 4:
                     if (a == 4)
                     {
                         b -= 1;
                     }
                     return b;
+
                 default:
                     Console.WriteLine("Invalid yearly quarter. Please enter again");
                     return a;
