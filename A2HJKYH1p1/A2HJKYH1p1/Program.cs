@@ -52,6 +52,7 @@ namespace A2HJKYHS1P1
 
             } while (Convert.ToInt32(quarter) > 5 || 0 >= Convert.ToInt32(quarter));
 
+            // Step 1 below
             Console.Write("Please enter your membership number: ");
             membershipNum = Console.ReadLine();
 
@@ -79,8 +80,9 @@ namespace A2HJKYHS1P1
 
             finalDiscountedTotalCost = QuarterDiscount(Convert.ToInt32(quarter), furtherDiscountedTotalCost);
 
+            // Step 5 below
             finalCost = finalDiscountedTotalCost * 1.13;
-
+            // Step 6 below
             if (finalCost < 20)
             {
                 finalCost = 0;
@@ -94,12 +96,9 @@ namespace A2HJKYHS1P1
             Console.WriteLine("Membership number: " + membershipNum);
             Console.WriteLine("Total items: " + itemNum);
             Console.WriteLine("Total cost before adjustment: " + totalCost);
-            Console.WriteLine("First discounted price: " + discountedTotalCost);
-            Console.WriteLine("Second discounted price: " + furtherDiscountedTotalCost);
             Console.WriteLine("Final cost: " + finalCost);     
         }
-
-
+        // Step 2 below
         static double Discount(int a, double b) // discount by number of purchsed items, a = itemNum, b = totalCost
         {
             double discountedTotalCost;
@@ -120,7 +119,7 @@ namespace A2HJKYHS1P1
 
             }
         }
-
+        // Step 3 below
         static double Discount(double a) // discount by total cost, a = furtherDiscountedTotalCost;
         {
             double furtherDiscountedTotalCost;
@@ -140,7 +139,7 @@ namespace A2HJKYHS1P1
                 return a;
             }
         }
-
+        // Step 4 below
         static double QuarterDiscount(int a, double b) // a = quarter, b = furtherDiscountedTotalCost
         {
             switch (Convert.ToInt32(a))
